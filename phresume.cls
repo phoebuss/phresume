@@ -1,5 +1,5 @@
 \NeedsTeXFormat {LaTeX2e}
-\ProvidesClass {mytex}
+\ProvidesClass {phresume}
 \LoadClass [12pt] {article}
 
 \RequirePackage [letterpaper, margin=0.5in] {geometry}
