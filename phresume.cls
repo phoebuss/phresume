@@ -26,10 +26,15 @@
     \setlength {\leftskip} {1em}
     \setlength {\rightskip} {1em}
 } {
-    Email: \href {mailto:\email} {\email}
-    \hfill
-    Phone: \phone \\
-    \vspace {1em}
+    \ifboolexpr {
+        test {\ifcsdef{email}} and not test {\ifdefempty{\email}} and
+        test {\ifcsdef{phone}} and not test {\ifdefempty{\phone}}
+    } {
+        Email: \href {mailto:\email} {\email}
+        \hfill
+        Phone: \phone \\
+        \vspace {1em}
+    } {}
 }
 
 \newenvironment {env_name} {
